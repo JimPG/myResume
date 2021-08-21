@@ -7,14 +7,9 @@
           :src="require(`@/assets/${person.headshot}`)"
           alt="圖片顯示錯誤"
         />
-        <!-- <img
-              class="round-image"
-              src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/22c22e57910025.59e8689468e11.jpg"
-              alt="圖片顯示錯誤"
-            /> -->
       </div>
       <div class="Portfolio_title">
-        {{ person.name.first + person.name.last }} <br />
+        {{ person.name }} <br />
         <p>{{ person.position }}</p>
       </div>
       <div class="Portfolio_content">
@@ -42,7 +37,6 @@
             <td class="title">地址</td>
             <td class="one">:</td>
             <td class="detail">
-              <!-- {{ person.contact.city + person.contact.street }} -->
               {{ person.location }}
             </td>
           </tr>
@@ -73,7 +67,7 @@
         <ul :key="skill" v-for="skill in person.skills">
           <li>{{ skill.name }}
             <div class="skill-bar">
-              <div :style="'width: ' + skill.level + '%'" class="level"></div>
+              <div :style="'width: ' + skill.score + '%'" class="score"></div>
             </div>
           </li>
         </ul>
@@ -88,7 +82,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
 h3 {
   font-weight: bold;
@@ -171,7 +164,7 @@ h3 {
       position: relative;
       width: 70%;
       margin-right: 35px;
-      .level {
+      .score {
         background: #757575;
         height: 100%;
       }
@@ -230,7 +223,7 @@ h3 {
       position: relative;
       width: 70%;
       margin-right: 12%; 
-      .level {
+      .score {
         background: #757575;
         height: 100%;
       }

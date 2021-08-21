@@ -85,6 +85,7 @@ export default {
       text-align: center;
       img {
         max-width: 56%;
+        cursor: pointer;
       }
     }
     .picture_name {
@@ -110,6 +111,7 @@ export default {
       text-align: center;
       img {
         width: 80%;
+        cursor: pointer;
       }
     }
   }

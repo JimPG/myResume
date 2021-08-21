@@ -21,12 +21,12 @@
 <script>
 import yaml from 'js-yaml';
 import {
-    PERSON
+    MYDATA
 } from './data/data.yml';
 import leftComponent from './components/Leftcomponent.vue';
 import rightComponent from './components/Rightcomponent.vue';
 import buttomComponent from './components/Bottomcomponent.vue';
-const person = yaml.load(PERSON);
+const person = yaml.load(MYDATA);
 
 export default {
   data(){
