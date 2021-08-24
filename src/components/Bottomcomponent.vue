@@ -2,16 +2,22 @@
   <div class="supplement">
     <div class="leftpic">
       <div class="pic-modify">
-        <img src="@/assets/598sample.png" @click="showMultiple(0)" alt="598搬家網"/>
+        <div class="imgarea">
+        <img src="@/assets/598sample1.jpg" @click="showMultiple(0)" alt="598搬家網"/>
+        </div>
         <div class="picture_name">&uarr;598搬家網開發畫面</div>
         <br>
-        <img src="@/assets/toeic.jpg" @click="showMultiple(1)" alt="toeic" />
+        <div class="imgarea">
+        <img src="@/assets/toeic.jpg" @click="showMultiple(2)" alt="toeic" />
+        </div>
         <div class="picture_name">&uarr;多益成績單, 750分</div>
       </div>
     </div>
     <div class="paper">
       <div class="paper-district">
+        <div class="imgarea1">
         <img src="@/assets/paper.jpg" alt="論文網址" @click="alert_newtab" />
+        </div>
         <div class="picture_name">碩士論文</div>
       </div>
     </div>
@@ -21,6 +27,7 @@
       moveDisabled
       :visible="visible"
       :imgs="imgs"
+      :index="index"
       @hide="handleHide"
     ></vue-easy-lightbox>
   </div>
@@ -34,7 +41,7 @@ export default {
   },
   data() {
     return {
-      imgs: [require("@/assets/598sample.png"), require("@/assets/toeic.jpg")],
+      imgs: [require("@/assets/598sample1.jpg"),require("@/assets/598sample2.jpg"), require("@/assets/toeic.jpg")],
       visible: false,
     };
   },
@@ -64,7 +71,11 @@ export default {
 
 
 <style scoped lang="less">
-@media (min-width: 992px) {
+.imgarea{
+  overflow: hidden;
+}
+
+@media (min-width: 996px) {
   .supplement {
     display: inline-block;
     .leftpic {
@@ -77,8 +88,15 @@ export default {
       }
       img {
         width: 100%;
+        cursor: pointer;
+      }
+      img:hover{
+        transform: scale(1.06);
       }
     }
+      .imgarea:hover{
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+      }
     .paper {
       float: right;
       width: 50%;
@@ -86,6 +104,11 @@ export default {
       img {
         max-width: 56%;
         cursor: pointer;
+        border: 1px #DDDDDD solid;
+      }
+      img:hover{
+        transform: scale(1.02);
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
       }
     }
     .picture_name {
@@ -93,7 +116,7 @@ export default {
     }
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 995px) {
   .supplement {
     display: inline-block;
     .leftpic {
@@ -101,6 +124,11 @@ export default {
       text-align: center;
       img {
         width: 80%;
+        cursor: pointer;
+      }
+      img:hover{
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
       }
     }
 
@@ -109,9 +137,15 @@ export default {
       margin: 0 auto;
       padding-top: 30px;
       text-align: center;
+      height: ;
       img {
         width: 80%;
         cursor: pointer;
+        border: 1px #DDDDDD solid;
+      }
+      img:hover{
+        transform: scale(1.02);
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
       }
     }
   }

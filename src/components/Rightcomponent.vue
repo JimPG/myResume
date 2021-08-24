@@ -1,7 +1,9 @@
 <template>
 <div id="right-component">
     <div class="experience">
-      <h3>專案經歷</h3>
+      <h3>
+        <img class="icon animate__animated animate__delay-1s animate__rubberBand" src="https://image.flaticon.com/icons/png/512/4229/4229452.png" alt="">
+        專案經歷</h3>
       <div class="experience-block" :key="experience" v-for="experience in person.experience">
         <div class="container">
           <div class="row">
@@ -23,7 +25,9 @@
       </div>
     </div>
     <div class="detail">
-      <h3>個人簡介</h3>
+      <h3>
+        <img class="icon animate__animated animate__delay-1s animate__rubberBand" src="https://image.flaticon.com/icons/png/512/3533/3533243.png" alt="">
+        個人簡介</h3>
       <div
         class="detail-block"
         :key="project"
@@ -51,7 +55,7 @@ h3 {
     font-size: 2em;
   }
 
-@media (min-width: 992px) {
+@media (min-width: 996px) {
     .detail{
         width: 80%;
         padding-top: 50px;
@@ -84,7 +88,7 @@ h3 {
     }
 }
 }
-@media (max-width: 992px){
+@media (max-width: 995px){
     .detail{
         width:80%;
         padding-top: 35px;
@@ -96,9 +100,10 @@ h3 {
     }
     .experience-block{
     display: inline-block;
-    width: 90%;
-    height: 130px;
-    margin-top: 10px;
+    max-width: 450px;
+    width: 80%;
+    max-height: 168px;
+    margin-top: 20px;
     border: 1px black solid;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
     .container{

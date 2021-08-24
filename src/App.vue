@@ -1,21 +1,23 @@
 <template>
-  <div id="resume" class="resume">
+<div id="outerspace">
+  <div id="resume" class="resume animate__animated animate__zoomIn ">
     <div class="header">
       <div class="top-row"></div>
     </div>
-          <div class="formal">
       <div class="basicinformation">
         <left-component :person="person"/>
       </div>
-
       <div class="selfintro">
         <right-component :person="person"/>
-      </div>
       </div>
       <div class="extra">
         <buttom-component />
       </div>
   </div>
+</div>
+<!-- <div style="background:black; height:200px;  position: relative; padding-bottom:80%" >
+  <header-component></header-component>
+</div> -->
 </template>
 
 <script>
@@ -26,19 +28,25 @@ import {
 import leftComponent from './components/Leftcomponent.vue';
 import rightComponent from './components/Rightcomponent.vue';
 import buttomComponent from './components/Bottomcomponent.vue';
+// import headerComponent from './components/clock.vue';
+// import $ from 'jquery';
 const person = yaml.load(MYDATA);
 
 export default {
   data(){
     return{
-      person
+      person,
     }
   },
+
   components:{
     leftComponent,
     rightComponent,
-    buttomComponent
+    buttomComponent,
+    // headerComponent
   },
+  mounted(){
+  }
 }
 </script>
 
@@ -47,10 +55,9 @@ export default {
 
 html{
     overflow-y: scroll;
+    height: 100%;
 }
 body{
-  background-color: #d6cfcf;
-  width: 100vw;
   overflow: hidden;
   margin: 0;
 }
@@ -61,12 +68,21 @@ body{
 :root body {
   position: absolute;
 }
-
+#outerspace{
+  background: radial-gradient(#628b2d, #2f378a);
+  display: flex;
+  justify-content:center;
+}
  #resume {
+  width: 80%;
+  margin-top: 9%;
+  margin-bottom: 9%;
+  background-color: rgb(255, 255, 255);
   font-family: 'Noto Sans TC', sans-serif;
   padding-bottom:50px;
   text-align: center;
   display: inline-block;
+  border: 1px black solid;
   a, a:focus, a:hover, a:visited {
     text-decoration:none;
   }
@@ -76,6 +92,7 @@ body{
     margin-top:0;
     letter-spacing:5px;
     font-weight:400;
+    margin-bottom: 15px;
   }
 }
   .header{
@@ -83,27 +100,35 @@ body{
     height: 50px;
   }
 
-  .top-row {
-    height: 300px;
-    background-image: url("https://cdn.pixabay.com/photo/2019/04/04/08/01/icon-4102192__340.png");
-    background-color: rgb(184, 98, 98);
-    background-size: contain;
-    background-repeat: ;
-    transform: rotate(-4deg);
-    margin-top: -70px;
-    position: absolute;
-    top: 0;
-    right: -20%;
-    left: -20%;
-    bottom: 0;
-    border: 2px solid #131b20;
+  .icon{
+    width: 35px;
   }
 
-@media(min-width: 992px){
+  // .top-row {
+  //   height: 300px;
+  //   background-image: url("https://cdn.pixabay.com/photo/2019/04/04/08/01/icon-4102192__340.png");
+  //   background-color: rgb(141, 35, 35);
+  //   background-size: contain;
+  //   margin-top: -70px;
+  //   position: absolute;
+  //   z-index: -1;
+  //   top: 0;
+  //   right: -20%;
+  //   left: -20%;
+  //   bottom: 0;
+  //   border: 2px solid #131b20;
+  // }
+  /*animated.css*/
+#resume .animate__animated{
+  --animate-duration: 1s;
+}
+  /*end of animated.css */
+
+@media(min-width: 996px){
 .basicinformation {
     width:26%;
     left: 10%;
-    margin-top: 100px;
+    margin-top: 70px;
     float: left;
     position: relative;
   }
@@ -112,21 +137,21 @@ body{
     width:60%;
     position: relative;
     float: right;
-    margin-top: 250px;
+    margin-top: 70px;
 }
 .extra {
   width: 100%;
   float: right;
-  margin-top: 50px;
+  margin-top: 40px;
   position: relative;
   }
 }
 
-@media(max-width: 992px) {
+@media(max-width: 995px) {
   .basicinformation{
     width: 100%;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 12%;
     position: relative;
   }
   .selfintro{
@@ -134,11 +159,22 @@ body{
     padding-top: 15px;
     position: relative;
     width: 100%;
+    // background-color: salmon;
   }
   .extra {
   width: 100%;
-  position: relative;
   bottom: 0;
   }
 }
+
+@media only screen and(max-width: 600px){
+  #resume {
+  width: 90%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}  
+}
+/* test area*/
+
+/* end */
 </style>

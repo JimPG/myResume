@@ -13,6 +13,6 @@ git add -A
 git commit -m 'deploy'
 
 # 部署到 https://github.com/chou0728/eric-project.git 分支為 gh-pages
-git push -f https://git@github.com:JimPG/myResume.git master:gh-pages
+git push -f git@github.com:JimPG/myResume.git master:gh-pages
 
 cd -
