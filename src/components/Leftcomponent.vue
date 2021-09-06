@@ -89,7 +89,7 @@ export default {
   mounted() {
     $(window).on('scroll',function(){
        var skillviewed = $(window).scrollTop();
-          if (skillviewed >= 200){
+          if (skillviewed >= 300){
             $(".skills").addClass("active")
             $(".skills .skill .skill-bar span").each(function() {
             $(this).animate({
@@ -108,6 +108,9 @@ h3 {
   font-weight: bold;
   font-size: 2em;
 }
+.icon{
+    width: 35px;
+  }
 .Portfolio_title {
   font-size: 30px;
   font-weight: bold;

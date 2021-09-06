@@ -74,4 +74,41 @@ projects:
     開資訊的事實，許多企管理論的應用更脫不開資訊系統的整合，因此，我才選擇在畢業後轉攻資訊相關的研究所，並發展出對於資訊產業的嚮往。
     大學畢業後，我考上了中山資管所，跨科系就讀的情況下，我就需要用更多的時間去補足資管基本的技能，在這短短的兩年間，我補上了包括資料庫、
     電商、R語言以及系統分析設計等等的相關知識，真正的踏入並喜歡上了IT領域。
+
+
+hobbies:
+- name: 打籃球
+  value: 336
+- name: 楓之谷
+  value: 200
+- name: Netflix
+  value: 150  
+- name: 灌高手遊
+  value: 252
+- name: 系排
+  value: 106
+- name: 健身
+  value: 312
+- name: 吃飯
+  value: 400
+- name: 睡覺
+  value: 288
+- name: 看遊戲實況
+  value: 140
+- name: 滑手機
+  value: 180
+- name: PC-GAME
+  value: 196
+- name: Youtube
+  value: 234
+- name: 思考人生
+  value: 106
+- name: 發呆
+  value: 86
+- name: 寫程式
+  value: 250
+- name: 發呆
+  value: 86
+- name: 發呆
+  value: 86
 `

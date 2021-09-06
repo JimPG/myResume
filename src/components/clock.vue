@@ -47,14 +47,14 @@ export default{
     text-align: center;
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 20%;
     transform: translate(-50%, -50%);
     // color: #264752;
     color: rgb(137, 204, 231);
     text-shadow: 0 0 20px rgb(39, 96, 116),  0 0 20px rgba(10, 175, 230, 0);
     .time {
         letter-spacing: 0.05em;
-        font-size: 80px;
+        font-size: 60px;
         padding: 5px 0;
     }
     .date {

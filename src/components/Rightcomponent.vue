@@ -54,7 +54,9 @@ h3 {
     font-weight: bold;
     font-size: 2em;
   }
-
+.icon{
+    width: 35px;
+  }
 @media (min-width: 996px) {
     .detail{
         width: 80%;

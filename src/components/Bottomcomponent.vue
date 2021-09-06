@@ -16,7 +16,7 @@
     <div class="paper">
       <div class="paper-district">
         <div class="imgarea1">
-        <img src="@/assets/paper.jpg" alt="論文網址" @click="alert_newtab" />
+          <img src="@/assets/paper.jpg" @click="alert_newtab" alt="paper">
         </div>
         <div class="picture_name">碩士論文</div>
       </div>
@@ -35,6 +35,7 @@
 
 <script>
 import VueEasyLightbox from "vue-easy-lightbox";
+
 export default {
   components: {
     VueEasyLightbox,
@@ -43,6 +44,7 @@ export default {
     return {
       imgs: [require("@/assets/598sample1.jpg"),require("@/assets/598sample2.jpg"), require("@/assets/toeic.jpg")],
       visible: false,
+      index: 0
     };
   },
   methods: {
